@@ -9,7 +9,7 @@ function counterApp(state, action) {
 
 	switch (action.type) {
 		case "Add":
-			return Object.assign( {}, state, { counter: counter + 1});
+			return Object.assign( {}, state, { counter: state.counter + 1}); 
 		default:
 			return state;
 	}

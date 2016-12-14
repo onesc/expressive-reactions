@@ -7,11 +7,16 @@ class App extends React.Component {
 		super(props)
 	}
 
+	click() {
+		this.props.testClick()
+	}
+
 	render() {
+		console.log("props", this.props)
 		return (
 			<div>
-				<h1> Hello redux </h1>
-				<h2> Counter: {this.props.counter}</h2>
+				<h2> Counter: {this.props.global.counter}</h2>
+				<button onClick={this.click.bind(this)}> Click Me </button>
 			</div>
 		)
 	}
@@ -19,7 +24,9 @@ class App extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		testClick: () => dispatch(CounterActions("Add"))
+		testClick: () => {
+			dispatch(CounterActions("Add"))
+		}
 	}
 }
 
