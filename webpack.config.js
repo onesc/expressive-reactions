@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-		entry: "./public/app.js",
+		entry: "./source/app.js",
 		output: {
 			path: __dirname + "/public",
 			filename: "/bundle.js"

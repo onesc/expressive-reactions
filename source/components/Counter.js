@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import { CounterActions } from './actions'
+import { CounterActions } from '../actions'
 
 class App extends React.Component {
 	constructor(props) {

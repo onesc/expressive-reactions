@@ -6,7 +6,6 @@ app.use(express.static('public'));
 
 app.use('/static', express.static(__dirname + '/public'));
 
-
 app.set('view engine', 'pug');
 
 app.get('*', function(req, res) {
